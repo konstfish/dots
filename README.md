@@ -13,3 +13,4 @@ My Dotfiles
 ## Other Sources
 
   - [Rafael Schreiber's fish config](https://github.com/rafaelschreiber/dotfiles)
+  - [Pecan Übersicht Widget](https://github.com/zzzeyez/Pecan)
