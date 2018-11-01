@@ -8,7 +8,7 @@ My Dotfiles
 ![Desktop](screens/desktop.png)
 
   - progs
-![iTerm](screenshots/progs.png)
+![progs](screens/progs.png)
 
 ## Other Sources
 
