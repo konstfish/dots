@@ -1,6 +1,6 @@
 # dots
 
-My Dotfiles
+My Dotfiles :)
 
 ## Screenshots
 
