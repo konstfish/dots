@@ -1,0 +1,9 @@
+#!/bin/bash
+
+bat(){
+	pmset -g batt | grep -o '[0-9]*%'
+}
+
+/usr/local/bin/./python3 /Users/david/Library/Application\ Support/Übersicht/widgets/Pecan/scripts/batt.py
+
+bat | head -c 3
