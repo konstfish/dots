@@ -17,6 +17,8 @@ brew install imagemagick
 brew install cmake
 brew install neofetch
 brew install nmap
+brew install fish
+brew install curl
 
 brew cask install firefox
 brew cask install google-chrome
