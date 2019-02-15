@@ -40,4 +40,6 @@ rm -r build
 
 cp -R ubersicht/* /Users/david/Library/Application Support/Übersicht/widgets
 
+./apms.sh
+
 echo "done!"
