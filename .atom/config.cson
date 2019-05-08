@@ -1,0 +1,66 @@
+"*":
+  "atom-material-ui":
+    colors: {}
+    fonts: {}
+    tabs:
+      compactTabs: true
+    ui:
+      useAnimations: false
+  "autocomplete-python":
+    useKite: false
+  "city-lights-ui":
+    fontSize: 10
+    showTabsInTreeView: true
+  core:
+    disabledPackages: [
+      "platformio-ide"
+      "platformio-ide-debugger"
+      "platformio-ide-terminal"
+      "autocomplete-python"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      ".pioenvs"
+      ".piolibdeps"
+      ".clang_complete"
+      ".gcc-flags.json"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "atom-material-ui"
+      "beach-syntax"
+    ]
+    titleBar: "custom"
+  editor:
+    fontFamily: "Hack"
+    fontSize: 12
+    invisibles: {}
+  "exception-reporting":
+    userId: "865b503d-6cac-40f1-a798-c54eac2e7727"
+  "file-icons":
+    coloured: false
+  latex: {}
+  "linter-ui-default":
+    panelHeight: 229
+    useBusySignal: false
+  minimap:
+    plugins:
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+  "platformio-ide":
+    advanced:
+      useBuiltinPIOCore: true
+  "tool-bar":
+    position: "Left"
+  touchbar:
+    buttons: "[{\"name\":\"comment-button\",\"type\":\"button\",\"label\":\"//\",\"command\":\"editor:toggle-line-comments\",\"color\":\"#2d2d2d\",\"icon\":\"\",\"iconColor\":\"default\"},{\"name\":\"color-picker\",\"type\":\"color-picker\"},{\"name\":\"spacer\",\"type\":\"button\",\"size\":\"small\",\"label\":\"\",\"command\":\"tree-view:toggle\",\"color\":\"#00716c\",\"icon\":\"NSTouchBarSidebarTemplate\",\"iconColor\":\"white\"},{\"type\":\"button\",\"name\":\"Config 1546554014239\",\"label\":\"RSFTP\",\"color\":\"#79a9fe\",\"command\":\"remote-ftp:toggle\"},{\"type\":\"button\",\"name\":\"Config 1544368202509\",\"label\":\"Server\",\"command\":\"atom-live-server:start-3000\",\"color\":\"#93e4ff\"},{\"type\":\"button\",\"name\":\"Config 1541961918165\",\"label\":\"TeX Build\",\"command\":\"latex:build\",\"color\":\"#fe8cbf\"}]"
+  "tree-view":
+    hideIgnoredNames: true
+  welcome:
+    showOnStartup: false
