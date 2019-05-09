@@ -1,45 +1,71 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-if [[ ! ($(ls /Applications/Xcode.app/) = Contents) ]]; then
-  echo "Install XCode before running this."
-  exit 1
+echo "[!] konstfish macOS setup script"
+
+echo "[*] setting up brew"
+if command -v brew &>/dev/null ; then
+  brew upgrade
+else
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-#installing brew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
 brew tap caskroom/cask
 
-#installing brew packages
+echo "[*] installing apps"
 brew cask install atom
+brew cask install google-chrome
+brew cask install firefox
+brew cask install spotify
+brew cask install ubersicht
+brew cask install moom
+brew cask install qbittorrent
+brew cask install discord
+brew cask install jetbrains-toolbox
 
+echo "[*] installing cli apps"
 brew install imagemagick
 brew install cmake
 brew install neofetch
 brew install nmap
-brew install fish
 brew install curl
+brew install wget
+brew install python3
 
-brew cask install firefox
-brew cask install google-chrome
-brew cask install bittorent
-brew cask install discord
-brew cask install jetbrains-toolbox
-brew cask install grammarly
-brew cask install adobe-creative-cloud
-brew cask install moom
-brew cask install iterm2
-brew cask install pycharm
-brew cask install intellij-idea
-brew cask install ubersicht
+echo "[*] setting up zsh"
+brew install zsh
+brew install node
 
-mkdir -p build
-git clone https://github.com/rafaelschreiber/dotfiles/
-build/dotfiles/./fish_install.sh
-rm -r build
+npm install -g spaceship-prompt
 
-cp -R ubersicht/* /Users/david/Library/Application Support/Übersicht/widgets
+chsh -s /bin/zsh
 
-./apms.sh
+echo "[*] installing fonts"
+echo "[-] hack"
+wget https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip
+unzip Hack-v3.003-ttf.zip
+cp ttf/*.ttf /Library/Fonts/
+rm -r ttf
+rm Hack-v3.003-ttf.zip
 
-echo "done!"
+echo ""
+echo "[-] scientifica"
+git clone https://github.com/NerdyPepper/scientifica
+cp scientifica/regular/scientifica.dfont /Library/Fonts/
+sudo rm -r scientifica
+
+echo ""
+echo "[-] nerdfont"
+mkdir nfhack
+cd nfhack
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Hack.zip
+unzip Hack.zip
+mv "Hack Regular Nerd Font Complete.ttf" /Library/Fonts
+cd ..
+rm -r nfhack
+
+echo "[*] setting up dive"
+
+git clone https://github.com/konstfish/dive && cd dive
+./install.sh
+
+echo "[!] done :)"
