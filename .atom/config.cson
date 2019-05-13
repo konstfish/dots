@@ -34,7 +34,7 @@
     telemetryConsent: "no"
     themes: [
       "atom-material-ui"
-      "beach-syntax"
+      "jackhammer-syntax"
     ]
     titleBar: "custom"
   editor:

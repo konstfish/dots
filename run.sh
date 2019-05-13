@@ -63,9 +63,31 @@ mv "Hack Regular Nerd Font Complete.ttf" /Library/Fonts
 cd ..
 rm -r nfhack
 
-echo "[*] setting up dive"
+printf "[>] set up dive? (y/n):  "
+read order
+if [ $order == "y" ]
+  then
+    echo "[*] setting up dive"
 
-git clone https://github.com/konstfish/dive && cd dive
-./install.sh
+    git clone https://github.com/konstfish/dive && cd dive
+    ./install.sh
+  else
+    echo ""
+fi
+
+printf "[>] copy atom config? (y/n):  "
+read order
+if [ $order == "y" ]
+  then
+    echo "[*] backing up old config & moving new config"
+    cp ~/.atom/config.cson ~/.atom/config_backup.cson
+    cp ./.atom/config.cson ~/.atom/config.cson
+    echo "[*] installing apm packages"
+    ./apm.sh
+  else
+    echo ""
+fi
+
+echo "[!] to set up iterm replace your config with the config from ./iterm/"
 
 echo "[!] done :)"
